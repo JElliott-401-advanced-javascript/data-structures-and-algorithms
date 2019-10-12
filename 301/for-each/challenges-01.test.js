@@ -123,19 +123,22 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-    arr.forEach((num, index, arr) => {
-        if (num % 3 === 1) {
-            arr.push('Fizz');
+    const newArr = [];
+    arr.forEach(num => {
+        if (num % 3 === 0 && num % 5 === 0) {
+            newArr.push('Fizz Buzz');
         }
-        else if (num % 5 === 1) {
-            arr.push('Buzz');
+        else if (num % 3 === 0) {
+            newArr.push('Fizz');
         }
-        else if (num % 3 === 1 && num % 5 === 1) {
-            arr.push('Fizz Buzz');
+        else if (num % 5 === 0) {
+            newArr.push('Buzz');
         }
-        else (arr.push(num));
+        else {
+            newArr.push(num);
+        }
     });
-    return arr;
+    return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
