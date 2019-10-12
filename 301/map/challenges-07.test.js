@@ -8,7 +8,6 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
   let toTheTwo = [];
   for(let i in arr){
     toTheTwo.push(Math.pow(2, arr[i]));
@@ -22,7 +21,6 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
   let toTheTwo = [];
   arr.forEach(element => {
     toTheTwo.push(Math.pow(2, element));
@@ -37,7 +35,6 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
   return arr.map(element => {
     let result = Math.pow(2, element);
     return result;
@@ -52,7 +49,6 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
-  // Solution code here...
   return arr.map(element => {
     let result = element.charCodeAt();
     return result;
@@ -67,7 +63,6 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
   return arr.map(element => {
     if(element % 2 === 0){
       return 'even';
@@ -121,7 +116,6 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
-  // Solution code here...
   return arr.map(element => {
     return element.ability.name;
   });
@@ -167,8 +161,11 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
-  // Solution code here...
- 
+  return arr.map(element => {
+    let newData = {name: element.stat.name, total: (element.effort + element.baseStat)};
+    return newData;
+  });
+
 };
 
 
