@@ -11,7 +11,6 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
   for(let i = 0; i <= str.length; i++) {
     result.push(str.slice(i));
   }
@@ -25,7 +24,6 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
   return arr.split('');
 };
 
@@ -69,13 +67,14 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
-  for(let i = 0; i < recipe.ingredients.length; i++){
+  for(let i in recipe.ingredients){
     let ingredient = recipe.ingredients[i];
     result.push(ingredient.slice(ingredient.indexOf(' ', 3)).slice(1));
-  }
+  };
+
   return result;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -85,10 +84,13 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
-  
+  for (let i in recipe.ingredients){
+    let ingredient = recipe.ingredients[i];
+    result.push(ingredient.split(' ').slice(2).join(' '));
+  }
   return result;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -99,7 +101,6 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
   for(let i = 0; i < recipe.steps.length; i++){
     result.push(recipe.steps[i].slice(0, recipe.steps[i].indexOf(' ', 0)));
   }
@@ -117,14 +118,24 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
-  for(let i = 0; i < arr.length; i++){
-    if(i % 2 === 1){
-      arr = arr.slice([i]);
-      console.log(arr);
-    }
-  }
+  for(let i = 0; i <= arr.length; i++){
+    if(i % 2 === 0){
+      arr.slice(arr[i], arr[i+1]);
+    };
+  };
+  console.log(arr);
+  return arr;
 };
+
+// const removeEvenValues = (arr) => {
+//   let length = arr;
+//   for (let i in length){
+//     for (let j in arr){
+//       if (arr[j] % 2 === 0) arr.splice(j, 1);
+//     }
+//   }
+//   return arr;
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -159,7 +170,7 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 const totalSumCSV = (str) => {
   let total = 0;
   // Solution code here...
-  
+
   return total;
 };
 
@@ -221,11 +232,11 @@ describe('Testing challenge 3', () => {
   });
 });
 
-// describe('Testing challenge 4', () => {
-//   test('It should return a list of foods', () => {
-//     expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
-//   });
-// });
+describe('Testing challenge 4', () => {
+  test('It should return a list of foods', () => {
+    expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
+  });
+});
 
 describe('Testing challenge 5', () => {
   test('It should return a list of recipe steps', () => {
@@ -263,12 +274,12 @@ describe('Testing challenge 7', () => {
   });
 });
 
-// describe('Testing challenge 8', () => {
-//   test('It should add up the numbers contained within the string', () => {
-//     expect(totalSumCSV('1,4,5,7,2')).toStrictEqual(19);
-//     expect(totalSumCSV('147')).toStrictEqual(147);
-//   });
-// });
+describe('Testing challenge 8', () => {
+  test('It should add up the numbers contained within the string', () => {
+    expect(totalSumCSV('1,4,5,7,2')).toStrictEqual(19);
+    expect(totalSumCSV('147')).toStrictEqual(147);
+  });
+});
 
 describe('Testing challenge 9', () => {
   test('It should return the string without vowels', () => {
@@ -279,11 +290,11 @@ describe('Testing challenge 9', () => {
   });
 });
 
-// describe('Testing challenge 10', () => {
-//   test('It should return the string without vowels', () => {
-//     expect(extractVowels('gregor')).toStrictEqual(['grgr', 'eo']);
-//     expect(extractVowels('gregor').length).toStrictEqual(2);
+describe('Testing challenge 10', () => {
+  test('It should return the string without vowels', () => {
+    expect(extractVowels('gregor')).toStrictEqual(['grgr', 'eo']);
+    expect(extractVowels('gregor').length).toStrictEqual(2);
 
-//     expect(extractVowels('The quick brown fox')).toStrictEqual(['Th qck brwn fx', 'eioou']);
-//   });
-// });
+    expect(extractVowels('The quick brown fox')).toStrictEqual(['Th qck brwn fx', 'eioou']);
+  });
+});
