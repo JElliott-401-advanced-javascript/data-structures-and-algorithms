@@ -2,9 +2,13 @@
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
+
 You friend Pat has a chain of stores around the greater Seattle area. He specializes in selling salmon cookies. Pat has data for the hourly sales of cookies per hour for each store. He wants to create an array of the total number of cookies sold per hour for all of his stores combined.
+
 Write a function named grandTotal that adds up the cookies sales for each hour of operation for all of the stores combined. For example, the first element in the hourlySales array should be the sum of the cookies sold in the 9:00 a.m. hour at all five stores combined.
+
 For this example, the total at 9:00 a.m. is 17 + 26 + 7 + 5 + 33, or 88 total cookies.
+
 Return the array of the total number of cookies sold per hour for all of the stores combined.
 ------------------------------------------------------------------------------------------------ */
 
@@ -33,8 +37,11 @@ const grandTotal = (stores) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
+
 Pat has decided that he would also like to organize his data as objects containing the number of cookies sold per hour and the time.
+
 Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
+
 Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
@@ -106,7 +113,7 @@ const battleship = (board, row, col) => {
   }else{
     return 'miss';
   }
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -115,9 +122,14 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
-
-}
+  let total = 1;
+  for(let i in numbers){
+    for(let j in numbers[i]){
+      total *= numbers[i][j]
+    }
+  }
+  return total;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -134,8 +146,16 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
-}
+  let allTemps = 0;
+  for(let i in weather){
+    let week = 0;
+    for(let j in weather[i]){
+      week += weather[i][j]
+    }
+    allTemps += week/weather[i].length
+  }
+  return allTemps/weather.length;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -153,7 +173,7 @@ let lowestWeeklyTemperatureData = [
 
 const lowestWeeklyAverage = (weather) => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
@@ -165,7 +185,7 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 
 const excel = (str) => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
