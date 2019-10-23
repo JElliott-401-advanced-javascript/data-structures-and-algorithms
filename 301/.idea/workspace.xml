@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeaaf09b-725f-4f65-9805-eee15423adca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/nested-for-loops/challenges-11.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/regular-expressions-2/challenges-11.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort/challenges-03.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/sort/challenges-03.test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,10 +17,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/regular-expressions-2/challenges-11.test.js">
+        <entry file="file://$PROJECT_DIR$/sort/challenges-03.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="490">
+              <caret line="380" selection-end-line="380" />
             </state>
           </provider>
         </entry>
@@ -40,6 +41,8 @@
         <option value="$PROJECT_DIR$/map/challenges-07.test.js" />
         <option value="$PROJECT_DIR$/chaining/challenges-10.test.js" />
         <option value="$PROJECT_DIR$/regular-expressions/challenges-04.test.js" />
+        <option value="$PROJECT_DIR$/regular-expressions-2/challenges-11.test.js" />
+        <option value="$PROJECT_DIR$/sort/challenges-03.test.js" />
       </list>
     </option>
   </component>
@@ -75,12 +78,7 @@
             <path>
               <item name="301" type="b2602c69:ProjectViewProjectNode" />
               <item name="301" type="462c0819:PsiDirectoryNode" />
-              <item name="object-dot-keys-values-entries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="301" type="b2602c69:ProjectViewProjectNode" />
-              <item name="301" type="462c0819:PsiDirectoryNode" />
-              <item name="regular-expressions-1" type="462c0819:PsiDirectoryNode" />
+              <item name="sort" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -118,12 +116,12 @@
       <option name="presentableId" value="Default" />
       <updated>1570902217202</updated>
       <workItem from="1570902218714" duration="2936000" />
-      <workItem from="1571797749348" duration="735000" />
+      <workItem from="1571797749348" duration="1447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3671000" />
+    <option name="totallyTimeSpent" value="4383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="76" width="1224" height="689" extended-state="0" />
@@ -210,8 +208,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/regular-expressions-2/challenges-11.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="1020">
+          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sort/challenges-03.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="380" selection-end-line="380" />
         </state>
       </provider>
     </entry>
