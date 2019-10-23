@@ -7,7 +7,6 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  // Solution code here...
   let letters = [];
   for(let i in arr){
     letters.push(arr[i].substring(0,1));
@@ -22,7 +21,6 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
   let includes = [];
   for(let i in arr){
     if(arr[i].includes(':)') === true){
@@ -39,8 +37,7 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
-let numbers = [];
+  let numbers = [];
   for(let i in arr){
     let str1 = arr[i].substring(1,4);
     let str2 = arr[i].substring(6,9);
@@ -57,7 +54,6 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
   let odds = '';
   for(let i =0; i < str.length; i++){
     if(i % 2 === 1){
@@ -73,7 +69,6 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
   let answers = arr.map(str => {
     return str.includes(':)');
   });
@@ -90,8 +85,7 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  // Solution code here...
-let includes = [];
+  let includes = [];
   for(let i in arr){
     if(arr[i].includes(target) === true){
       includes.push(arr[i]);
@@ -106,8 +100,7 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
-let includes = [];
+  let includes = [];
   for(let i in arr){
     if(arr[i].includes(target) === true){
       includes.push(arr[i]);
