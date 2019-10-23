@@ -7,7 +7,6 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
   return arr.reduce((acc) => {
     return (acc + 1);
   }, 0);
@@ -28,48 +27,47 @@ let starWarsData = [{
   birth_year: '19BBY',
   gender: 'male',
 },
-{
-  name: 'C-3PO',
-  height: '167',
-  mass: '75',
-  hair_color: 'n/a',
-  skin_color: 'gold',
-  eye_color: 'yellow',
-  birth_year: '112BBY',
-  gender: 'n/a'},
-{
-  name: 'R2-D2',
-  height: '96',
-  mass: '32',
-  hair_color: 'n/a',
-  skin_color: 'white, blue',
-  eye_color: 'red',
-  birth_year: '33BBY',
-  gender: 'n/a'
-},
-{
-  name: 'Darth Vader',
-  height: '202',
-  mass: '136',
-  hair_color: 'none',
-  skin_color: 'white',
-  eye_color: 'yellow',
-  birth_year: '41.9BBY',
-  gender: 'male'
-},
-{
-  name: 'Leia Organa',
-  height: '150',
-  mass: '49',
-  hair_color: 'brown',
-  skin_color: 'light',
-  eye_color: 'brown',
-  birth_year: '19BBY',
-  gender: 'female'
-}]
+  {
+    name: 'C-3PO',
+    height: '167',
+    mass: '75',
+    hair_color: 'n/a',
+    skin_color: 'gold',
+    eye_color: 'yellow',
+    birth_year: '112BBY',
+    gender: 'n/a'},
+  {
+    name: 'R2-D2',
+    height: '96',
+    mass: '32',
+    hair_color: 'n/a',
+    skin_color: 'white, blue',
+    eye_color: 'red',
+    birth_year: '33BBY',
+    gender: 'n/a'
+  },
+  {
+    name: 'Darth Vader',
+    height: '202',
+    mass: '136',
+    hair_color: 'none',
+    skin_color: 'white',
+    eye_color: 'yellow',
+    birth_year: '41.9BBY',
+    gender: 'male'
+  },
+  {
+    name: 'Leia Organa',
+    height: '150',
+    mass: '49',
+    hair_color: 'brown',
+    skin_color: 'light',
+    eye_color: 'brown',
+    birth_year: '19BBY',
+    gender: 'female'
+  }]
 
 const returnNames = (arr) => {
-  // Solution code here...
   let names = [];
   arr.reduce((acc, val, idx) => {
     names.push(val.name);
@@ -84,7 +82,6 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (arr) => {
-  // Solution code here...
   let array = arr.split('');
   return array.reduce((acc, newLetter, idx) => {
     return newLetter + acc;
@@ -140,11 +137,10 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
-  return arr.reduce((acc, val, idx) => {
-    console.log('val.children.length', val.children.length);
-    console.log('acc', acc);
-    acc = acc + val.children.length;
+  return arr.reduce((acc, val) => {
+    if (val.children) {
+      acc += val.children.length;
+    }
     return acc;
   }, 0);
 };
@@ -156,7 +152,6 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
   let total =  arr.reduce((acc, val, idx) => {
     return acc + val;
   }, 0);
@@ -179,7 +174,12 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  return arr.reduce((acc, val) => {
+    if(isPrime(val)) {
+      acc++
+    };
+    return acc;
+  }, 0);
 
 };
 
@@ -221,7 +221,12 @@ const snorlaxData = {
 };
 
 const extractStat = (statName, arr) => {
-  // Solution code here...
+  return arr.reduce((acc, val, statName) => {
+    if(statName===val.stat.name) {
+      acc.push(val);
+    };
+    return acc;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -232,7 +237,19 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 const extractChildren = (arr) => {
-  // Solution code here...
+  let aNameArr = arr.filter(element => {
+    if(element.name.includes('a')) {
+      return element;
+    }
+  });
+  return aNameArr.reduce((acc, val) => {
+    if(val.children) {
+      val.children.forEach((element) => {
+        acc.push(element);
+      });
+    };
+    return acc;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -273,21 +290,21 @@ describe('Testing challenge 5', () => {
   });
 });
 
-// describe('Testing challenge 6', () => {
-//   test('It should return a count of the prime numbers in the array', () => {
-//     expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
-//   });
-// });
+describe('Testing challenge 6', () => {
+  test('It should return a count of the prime numbers in the array', () => {
+    expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
+  });
+});
 
-// describe('Testing challenge 7', () => {
-//   test('It should return any stats that match the input', () => {
-//     expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({ stat: { url: 'https://pokeapi.co/api/v2/stat/6/', name: 'speed' }, effort: 5, baseStat: 30 });
-//   });
-// });
+describe('Testing challenge 7', () => {
+  test('It should return any stats that match the input', () => {
+    expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({ stat: { url: 'https://pokeapi.co/api/v2/stat/6/', name: 'speed' }, effort: 5, baseStat: 30 });
+  });
+});
 
-// describe('Testing challenge 8', () => {
-//   test('It should return an array containing the names of the children', () => {
-//     expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
-//     expect(extractChildren(characters).length).toStrictEqual(10);
-//   });
-// });
+describe('Testing challenge 8', () => {
+  test('It should return an array containing the names of the children', () => {
+    expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
+    expect(extractChildren(characters).length).toStrictEqual(10);
+  });
+});
