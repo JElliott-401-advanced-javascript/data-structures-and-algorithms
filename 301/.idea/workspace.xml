@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeaaf09b-725f-4f65-9805-eee15423adca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/reduce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reduce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regular-expressions/challenges-04.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/regular-expressions/challenges-04.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nested-for-loops/challenges-11.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/regular-expressions-2/challenges-11.test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,47 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/object-dot-keys-values-entries/challenges-06.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3390">
-              <caret line="226" column="3" selection-start-line="226" selection-start-column="3" selection-end-line="226" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/map/challenges-07.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="256" column="3" selection-start-line="256" selection-start-column="3" selection-end-line="256" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chaining/challenges-10.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="215" selection-start-line="215" selection-end-line="215" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nested-for-loops/challenges-11.test.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/regular-expressions-2/challenges-11.test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/regular-expressions/challenges-04.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="210" selection-end-line="210" />
             </state>
           </provider>
         </entry>
@@ -112,17 +75,12 @@
             <path>
               <item name="301" type="b2602c69:ProjectViewProjectNode" />
               <item name="301" type="462c0819:PsiDirectoryNode" />
-              <item name="nested-for-loops" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="301" type="b2602c69:ProjectViewProjectNode" />
-              <item name="301" type="462c0819:PsiDirectoryNode" />
               <item name="object-dot-keys-values-entries" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="301" type="b2602c69:ProjectViewProjectNode" />
               <item name="301" type="462c0819:PsiDirectoryNode" />
-              <item name="regular-expressions" type="462c0819:PsiDirectoryNode" />
+              <item name="regular-expressions-1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -131,6 +89,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -159,12 +118,12 @@
       <option name="presentableId" value="Default" />
       <updated>1570902217202</updated>
       <workItem from="1570902218714" duration="2936000" />
-      <workItem from="1571797749348" duration="506000" />
+      <workItem from="1571797749348" duration="735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3442000" />
+    <option name="totallyTimeSpent" value="3671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="76" width="1224" height="689" extended-state="0" />
@@ -242,17 +201,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nested-for-loops/challenges-11.test.js">
+    <entry file="file://$PROJECT_DIR$/regular-expressions-1/challenges-04.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="508">
+          <caret line="210" selection-end-line="210" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/regular-expressions/challenges-04.test.js">
+    <entry file="file://$PROJECT_DIR$/regular-expressions-2/challenges-11.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="210" selection-end-line="210" />
+        <state relative-caret-position="135">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>
