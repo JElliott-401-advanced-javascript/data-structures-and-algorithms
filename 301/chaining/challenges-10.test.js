@@ -8,7 +8,6 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
   let count = 0;
   input.map(element => {
     return element.map(nums => {
@@ -28,7 +27,6 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
   let newArray = input.map(elements => {
     return elements.reduce((acc, val) => {
       return acc + val;
@@ -37,12 +35,7 @@ const totalSum = (input) => {
   let powers = newArray.reduce((acc, val) => {
     return acc + val;
   }, 0);
-  let toTheTwo = [];
-  for(let i in powers){
-    toTheTwo.push(Math.pow(2, powers[i]));
-  }
-  return toTheTwo;
-
+  return powers;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,7 +47,6 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
   let numArray = input.map(arr => {
     return arr.filter(n => {
       if(typeof n === 'number'){
@@ -99,52 +91,49 @@ let starWarsData = [{
   birth_year: '19BBY',
   gender: 'male',
 },
-{
-  name: 'C-3PO',
-  height: '167',
-  mass: '75',
-  hair_color: 'n/a',
-  skin_color: 'gold',
-  eye_color: 'yellow',
-  birth_year: '112BBY',
-  gender: 'n/a'
-},
-{
-  name: 'R2-D2',
-  height: '96',
-  mass: '32',
-  hair_color: 'n/a',
-  skin_color: 'white, blue',
-  eye_color: 'red',
-  birth_year: '33BBY',
-  gender: 'n/a'
-},
-{
-  name: 'Darth Vader',
-  height: '202',
-  mass: '136',
-  hair_color: 'none',
-  skin_color: 'white',
-  eye_color: 'yellow',
-  birth_year: '41.9BBY',
-  gender: 'male'
-},
-{
-  name: 'Leia Organa',
-  height: '150',
-  mass: '49',
-  hair_color: 'brown',
-  skin_color: 'light',
-  eye_color: 'brown',
-  birth_year: '19BBY',
-  gender: 'female'
-}];
+  {
+    name: 'C-3PO',
+    height: '167',
+    mass: '75',
+    hair_color: 'n/a',
+    skin_color: 'gold',
+    eye_color: 'yellow',
+    birth_year: '112BBY',
+    gender: 'n/a'
+  },
+  {
+    name: 'R2-D2',
+    height: '96',
+    mass: '32',
+    hair_color: 'n/a',
+    skin_color: 'white, blue',
+    eye_color: 'red',
+    birth_year: '33BBY',
+    gender: 'n/a'
+  },
+  {
+    name: 'Darth Vader',
+    height: '202',
+    mass: '136',
+    hair_color: 'none',
+    skin_color: 'white',
+    eye_color: 'yellow',
+    birth_year: '41.9BBY',
+    gender: 'male'
+  },
+  {
+    name: 'Leia Organa',
+    height: '150',
+    mass: '49',
+    hair_color: 'brown',
+    skin_color: 'light',
+    eye_color: 'brown',
+    birth_year: '19BBY',
+    gender: 'female'
+  }];
 
 let findMaleAndFemale = (data) => {
-  // Solution code here...
-  //help from Rick and Nikki
   let names = data.reduce((acc, val) => {
-    console.log(val.gender);
     if(val.gender === 'n/a'){
       return acc;
     }else if(!val.name){
@@ -155,26 +144,20 @@ let findMaleAndFemale = (data) => {
     }
   }, []);
   return names.join(' and ');
-  // let namesArray = data.reduce((acc, val)=> {
-  //   if(val.gender !== 'n/a'){
-  //     acc.push(val.name);
-  //     return acc;
-  //   }
-  // }, []);
-  // console.log('namesArray', namesArray);
-  // let newNames = namesArray.toString();
-  // console.log('newNames', newNames);
-  // let regEx = /[,]/g;
-  // return newNames.replace(regEx, ' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
-Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the shortest character.
+Write a function named findShortest that, given the Star Wars data from Challenge 4, uses any combination of filter, map and reduce to return the name of the shortest character.
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  return data.reduce((acc, val) => {
+    if(acc.name<val.name) {
+      acc = val.name;
+    }
+    return acc;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -225,8 +208,8 @@ describe('Testing challenge 4', () => {
   });
 });
 
-// describe('Testing challenge 5', () => {
-//   test('It should return the name of the shortest character', () => {
-//     expect(findShortest(starWarsData)).toStrictEqual('R2-D2');
-//   });
-// });
+describe('Testing challenge 5', () => {
+  test('It should return the name of the shortest character', () => {
+    expect(findShortest(starWarsData)).toStrictEqual('R2-D2');
+  });
+});
