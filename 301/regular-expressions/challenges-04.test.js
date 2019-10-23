@@ -11,7 +11,6 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
   let regEx = /\d/;
   return regEx.test(input);
 };
@@ -23,7 +22,6 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
   let regEx1 = /[A-Z]+\w+/g;
   return str.match(regEx1);
 };
@@ -35,7 +33,6 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
   let citiesAtoJArray = [];
   let regEx2 = /[A-J]+\w+\s?/gy;
   for (let i = 0; i < arr.length; i ++){
@@ -55,7 +52,6 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
   let regEx3 = /[Oo][Oct][october][oct]/;
   if(input.match(regEx3)!== null){
     return true;
@@ -73,7 +69,6 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
   let regEx4 = /\w+\b(?:\s)/g;
   return str.match(regEx4);
 };
@@ -89,7 +84,6 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  // Solution code here...
   let regEx5 = /[AaEeIiOoUu]/g;
   str = str.replace(regEx5, '_');
   return str;
@@ -105,7 +99,6 @@ Hint: All of these words end with the letters "ells".
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (str) => {
-  // Solution code here...
   // let regEx6 = /[.]/g;
   // str = str.replace(regEx6, '');
 
